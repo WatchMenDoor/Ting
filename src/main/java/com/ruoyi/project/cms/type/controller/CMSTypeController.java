@@ -24,7 +24,7 @@ import java.util.List;
  * @version: 1.0
  */
 @Controller
-@RequestMapping("/cms/type")
+@RequestMapping(CMSTypeConst.PATH_PREFIX)
 public class CMSTypeController extends BaseController {
 
     @Autowired

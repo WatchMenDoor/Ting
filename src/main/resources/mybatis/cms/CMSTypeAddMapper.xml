@@ -14,7 +14,7 @@
         <result property="updateTime"    column="update_time"   />
         <result property="remark"        column="remark"        />
     </resultMap>
-    <select id="checkTypeNameUnique" resultMap="com.ruoyi.project.cms.type.mapper.CMSTypeAddMapper.CMSTypeResult" >
+    <select id="checkTypeNameUnique" resultMap="CMSTypeResult" >
         select type_id, type_name, type_sort, status, create_by, create_time, remark
         from cms_type where type_name=#{typeName}
 
