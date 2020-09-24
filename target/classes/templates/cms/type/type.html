@@ -54,7 +54,7 @@
             updateUrl: prefix + "/edit/{id}",//修改路径地址
             removeUrl: prefix + "/remove",
             //exportUrl: prefix + "/export",
-            sortName: "cmsTypeSort",
+            sortName: "typeSort",
             modalName: "公告类型",
             columns: [{
                 checkbox: true
@@ -64,17 +64,17 @@
                     title: '公告类型编号'
                 },
                 {
-                    field: 'postCode',
+                    field: 'typeName',
                     title: '公告类型名称',
                     sortable: true
                 },
                 {
-                    field: 'postName',
+                    field: 'remark',
                     title: '公告类型描述',
                     sortable: true
                 },
                 {
-                    field: 'postSort',
+                    field: 'typeSort',
                     title: '显示顺序',
                     sortable: true
                 },

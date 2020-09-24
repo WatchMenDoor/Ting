@@ -4,8 +4,10 @@ import com.ruoyi.framework.web.controller.BaseController;
 import com.ruoyi.framework.web.page.TableDataInfo;
 import com.ruoyi.project.cms.type.commons.CMSTypeConst;
 import com.ruoyi.project.cms.type.domain.CMSType;
+import com.ruoyi.project.cms.type.service.ICMSTypeService;
 import com.ruoyi.project.system.post.domain.Post;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +27,9 @@ import java.util.List;
 @RequestMapping("/cms/type")
 public class CMSTypeController extends BaseController {
 
+    @Autowired
+    private ICMSTypeService typeService;
+
 
 
 
@@ -42,7 +47,7 @@ public class CMSTypeController extends BaseController {
         //分页处理
         startPage();
         //通过服务代码，mapper调用
-        List<CMSType> list = new ArrayList<>();
+        List<CMSType> list = typeService.selectCMSTypeList(type);
         return getDataTable(list);
 
     }
