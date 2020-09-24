@@ -17,7 +17,7 @@ public class CMSType extends BaseEntity {
 
     private Long typeId;
     private String typeName;
-    private String typeSort;
+        private String typeSort;
     private String status;
 
     public Long getTypeId() {
